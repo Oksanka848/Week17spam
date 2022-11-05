@@ -10,3 +10,15 @@
 .comments .comment:hover {
   background: #eee;
 }
+
+.panel-comments {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  color: rgba(88, 85, 85, 0.87);
+  margin-bottom: 1rem;
+  margin-left: 5%;
+  margin-top: 15%;
+  padding-bottom: 0.25rem;
+}
