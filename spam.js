@@ -28,28 +28,26 @@ let commentarea = document.querySelector('[data-textarea="comment"]');
 let button = document.querySelector('[data-action="add"]');
 let commentList = document.querySelector('[data-id="comment-list"]');
 button.addEventListener('click', () => {
-  const object = {};
+  
   if (commentarea.value != '') {
     comments.push({ id: nextId++, text: commentarea.value });
   }
   createElement(commentarea.value);
   commentarea.value = '';
-  if (commentarea.value != 'viagra'){
-    comments.push({ id: nextId++, text: commentList.value != '***' });
-  }
-  commentList.value = '***';
+ 
   
 });
 
 function createElement(ci) {
-  let newComment = document.createElement('p');
-  for (let i=0; i<newComment.length; i++) {
-    newComment[i].style.marginLeft = i + '15px';}
-  
-  newComment.textContent = ci;
+  var newComment = document.createElement("div");
+  newComment.classList.add('panel-comments');
+  document.body.append(newComment);
+  for (i=0; i<newComment.length; i++) {
+    newComment[i].style.marginLeft = i + '10%' ;}
+
+  console.log(newComment);
   commentList.appendChild(newComment);
-  
-  
+  newComment.textContent = ci;
 }
 
   
