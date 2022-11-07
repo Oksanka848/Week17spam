@@ -34,7 +34,14 @@ button.addEventListener('click', () => {
   }
   createElement(commentarea.value);
   commentarea.value = '';
- 
+  checkSpam(commentarea.value);
+  commentarea.value = '';
+  if (comments.includes("viagra") || comments.includes("xxx")) {
+    let commentarea = str.toLowerCase();
+  let spam1=commentarea.includes('viagra');
+  let spam2=commentarea.includes('xxx');
+    comments.push({ id: nextId++, text: commentarea.replace(spam1 || spam2,commentarea.value('***')) });
+  }
   
 });
 
@@ -49,6 +56,13 @@ function createElement(ci) {
   commentList.appendChild(newComment);
   newComment.textContent = ci;
 }
-
+checkSpam=(str)=> {
+  let commentarea = str.toLowerCase();
+let spam1=commentarea.includes('viagra');
+let spam2=commentarea.includes('xxx');
+  
+let commentarea2=commentarea.replace(spam1 || spam2,commentList.includes('***'));
+    console.log(commentarea2);
+}
   
 
