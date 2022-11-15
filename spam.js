@@ -19,43 +19,51 @@
   commentarea=commentarea.replace(spam1 || spam2,commentList.includes('***'));
       console.log(commentarea);
   }*/
-let nextId = 1;
+/*let nextId = 1;
 
-const comments = [];
+const comments = [];*/
 
 
-let commentarea = document.querySelector('[data-textarea="comment"]');
+let commentarea = document.getElementById('comment').value;
 let button = document.querySelector('[data-action="add"]');
-let commentList = document.querySelector('[data-id="comment-list"]');
+let commentList = document.getElementById('comment-list');
+
 button.addEventListener('click', () => {
-  
-  if (commentarea.value != '') {
+  commentList.innerHTML+=`<div>${commentarea}</div><br>`;
+});
+
+
+  /*if (commentarea.value != '') {
     comments.push({ id: nextId++, text: commentarea.value });
   }
   createElement(commentarea.value);
   commentarea.value = '';
   checkSpam(commentarea.value);
   commentarea.value = '';
-  if (comments.includes("viagra") || comments.includes("xxx")) {
+  /*if (comments.includes("viagra") || comments.includes("xxx")) {
     let commentarea = comments.toLowerCase();
   let spam1=commentarea.includes('viagra');
   let spam2=commentarea.includes('xxx');
+  
     comments.push({ id: nextId++, text: commentarea.replace(spam1 || spam2,commentarea.value('***')) });
   }
+  var str = commentarea.join ('<br>');
+  commentList.innerHTML=str;
+  commentarea.value = '';*/
   
-});
 
-function createElement(ci) {
+
+/*function createElement(ci) {
   var newComment = document.createElement("div");
   newComment.classList.add('panel-comments');
   document.body.append(newComment);
   for (i=0; i<newComment.length; i++) {
-    newComment[i].style.marginLeft = i + '10%' ;}
+    newComment[i].style.marginLeft = i + + "150px" ;
 
   console.log(newComment);
   commentList.appendChild(newComment);
   newComment.textContent = ci;
-}
+}}
 checkSpam=(str)=> {
   let commentarea = str.toLowerCase();
 const spam1=commentarea.includes('viagra');
@@ -63,6 +71,6 @@ const spam2=commentarea.includes('xxx');
   
 let commentarea2=commentarea.replace(spam1 || spam2,commentList.includes('***'));
     console.log(commentarea2);
-}
+}*/
   
 
