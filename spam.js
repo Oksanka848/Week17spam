@@ -29,14 +29,17 @@ let button = document.querySelector('[data-action="add"]');
 let commentList = document.getElementById('comment-list');
 
 button.addEventListener('click', () => {
-  let commentarea = document.getElementById('comment').value;
-  
+ 
+
   commentList.innerHTML+=`<div>${commentarea}</div><br>`;
   
   if (commentarea.includes("viagra")){
     commentList.innerHTML=`<div>${'***'}</div><br>`;}
-    else if (commentarea.includes("xxx")){
+    
+     if (commentarea.includes("xxx")){
       commentList.innerHTML=`<div>${'***'}</div><br>`;}  
+     
+
   });
 
 
