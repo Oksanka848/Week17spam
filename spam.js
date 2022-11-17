@@ -25,19 +25,22 @@ const comments = [];*/
 
 
 let commentarea = document.getElementById('comment').value;
-let button = document.querySelector('[data-action="add"]');
+
 let commentList = document.getElementById('comment-list');
 
 button.addEventListener('click', () => {
- 
-
-  commentList.innerHTML+=`<div>${commentarea}</div><br>`;
+  let commentarea = document.getElementById('comment').value;
+  
+  let commentList = document.getElementById('comment-list');
+  commentList.innerHTML+=`<div>${commentarea}</div><br>` ;
   
   if (commentarea.includes("viagra")){
     commentList.innerHTML=`<div>${'***'}</div><br>`;}
     
-     if (commentarea.includes("xxx")){
+    else if (commentarea.includes("xxx")){
       commentList.innerHTML=`<div>${'***'}</div><br>`;}  
+     
+      
      
 
   });
