@@ -25,20 +25,21 @@ const comments = [];*/
 
 
 let commentarea = document.getElementById('comment').value;
-
+let button = document.querySelector('[data-action="add"]');
 let commentList = document.getElementById('comment-list');
-
+let namea = document.getElementById('name').value;
 button.addEventListener('click', () => {
   let commentarea = document.getElementById('comment').value;
-  
+  let namea = document.getElementById('name').value;
   let commentList = document.getElementById('comment-list');
-  commentList.innerHTML+=`<div>${commentarea}</div><br>` ;
+  commentList.innerHTML+=`<p>${namea}<p><a href="https://pixelbox.ru/wp-content/uploads/2022/06/risovanie-avatars-for-girls-pixelbox.ru-54.jpg"><img src="https://pixelbox.ru/wp-content/uploads/2022/06/risovanie-avatars-for-girls-pixelbox.ru-54.jpg" width="50" 
+  height="50" alt="avatar"></a></p> ${commentarea}</p><br>` ;
   
   if (commentarea.includes("viagra")){
-    commentList.innerHTML=`<div>${'***'}</div><br>`;}
+    commentList.innerHTML=`<span>${'***'}</span><br>`;}
     
     else if (commentarea.includes("xxx")){
-      commentList.innerHTML=`<div>${'***'}</div><br>`;}  
+      commentList.innerHTML=`<span>${'***'}</span><br>`;}  
      
       
      
