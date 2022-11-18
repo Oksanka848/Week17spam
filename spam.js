@@ -1,50 +1,33 @@
-/*describe("checkSpam", function() {
-    it('считает спамом "buy ViAgRA now"', function() {
-      assert.isTrue(checkSpam('buy ViAgRA now'));
-    });
-  
-    it('считает спамом "free xxxxx"', function() {
-      assert.isTrue(checkSpam('free xxxxx'));
-    });
-  
-    it('не считает спамом "innocent rabbit"', function() {
-      assert.isFalse(checkSpam('innocent rabbit'));
-    });
-  });
-  checkSpam=(str)=> {
-    let commentarea = str.toLowerCase();
-  let spam1=commentarea.includes('viagra');
-  let spam2=commentarea.includes('xxx');
-    
-  commentarea=commentarea.replace(spam1 || spam2,commentList.includes('***'));
-      console.log(commentarea);
-  }*/
-/*let nextId = 1;
-
-const comments = [];*/
 
 
-let commentarea = document.getElementById('comment').value;
+document.addEventListener('DOMContentLoaded', function(event){
+  let namea = localStorage.getItem("name");
+  document.getElementById("comment").value = "";
+  if (namea!=null){
+    document.getElementById("name").value = namea;
+  }
+});
 
-let commentList = document.getElementById('comment-list');
-
-button.addEventListener('click', () => {
+function setmes() {
   let commentarea = document.getElementById('comment').value;
-  
+  let namea = document.getElementById('name').value;
   let commentList = document.getElementById('comment-list');
-  commentList.innerHTML+=`<div>${commentarea}</div><br>` ;
-  
+  commentList.innerHTML+=`<span>${namea}</span><a href="https://pixelbox.ru/wp-content/uploads/2022/06/risovanie-avatars-for-girls-pixelbox.ru-54.jpg"><img src="https://pixelbox.ru/wp-content/uploads/2022/06/risovanie-avatars-for-girls-pixelbox.ru-54.jpg" width="50" 
+  height="50" alt="avatar"></a><span>${commentarea}</span><br>` ;
+  commentarea.value = '';
+
+  if (localStorage.getItem('name') == null){
+    localStorage.setItem ('name', namea);
+  }
   if (commentarea.includes("viagra")){
     commentList.innerHTML=`<div>${'***'}</div><br>`;}
     
-    else if (commentarea.includes("xxx")){
+    if (commentarea.includes("xxx")){
       commentList.innerHTML=`<div>${'***'}</div><br>`;}  
-     
-      
-     
 
-  });
-
+      commentarea.value = '';
+  }
+  
 
 
   /*if (commentarea.value != '') {

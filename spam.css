@@ -20,6 +20,18 @@
   color: rgba(110, 106, 106, 0.87);
   margin-top: 2%;
   margin-left: 1px;
-  width: 15%;
+  width: 5%;
   height: 55%;
+}
+.form-name {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  color: rgba(110, 106, 106, 0.87);
+  margin: 5%;
+  margin-left: 1px;
+  width: 80%;
+  height: 35%;
 }
